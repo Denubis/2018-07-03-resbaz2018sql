@@ -1,19 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
+venue: "Resbaz Sydney 2018"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Room 373, 17 Wallys Walk, Macquarie University "      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "au"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "-33.7747746,151.1121345"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+humandate: "Jul 3-5, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:45 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2018-07-03      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2018-07-04        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Brian Ballsun-Stanton", "Richard Berry", "Ghulam Murtaza"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Peter Ha", "Aniko Toth"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["resbazsydney@googlegroups.com", "brian.ballsun-stanton@mq.edu.au"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes: http://pad.software-carpentry.org/2018-03-03-resbazSQL             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -28,28 +28,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
-{% comment %}
-  EVENTBRITE
-
-  This block includes the Eventbrite registration widget if
-  'eventbrite' has been set in the header.  You can delete it if you
-  are not using Eventbrite, or leave it in, since it will not be
-  displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -59,27 +37,29 @@ and our administrator may contact you if we need any extra information.</h4>
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 {% endcomment %}
-{% if page.carpentry == "swc" %}
-  {% include sc/intro.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/intro.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/intro.html %}
-{% endif %}
+<p>
+  <a href="{{site.swc_site}}">Software Carpentry</a> aims to help researchers get their work done in less time and with less pain by teaching them basic research computing skills. This workshop is part of the <a href="https://resbaz.github.io/resbaz2018/sydney/">Research Bazaar Sydney 2018</a> event. 
 
-{% comment %}
-  AUDIENCE
+  This intermediate workshop teaches data manipulation using SQL and Python, building on prior Software Carpentry experience.
 
-  Explain who your audience is.  (In particular, tell readers if the
-  workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if page.carpentry == "swc" %}
-  {% include sc/who.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/who.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/who.html %}
-{% endif %}
+  Day one covers SQL and good database design. Day two teaches webscraping and transitioning from spreadsheets to databases. 
+
+  Attendees of all skill levels are absolutely welcome. Participants will be encouraged to help one another and to apply what they have learned to their own research problems.
+</p>
+<p align="center">
+  <em>
+    For more information on what is taught in Software Carpentry, please see the paper "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
+</p>
+
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at graduate students and other researchers.
+  <strong>
+    You don't need to have any previous knowledge of SQL, web-scraping, or transitioning data from a spreadsheet into a database that will be presented at the workshop. We invite attendees who have been through a software carpentry event before, and would ask that attendees have some small prior experience with the bash shell and Python.
+  </strong>
+</p>
+
 
 {% comment %}
   LOCATION
@@ -210,16 +190,50 @@ and our administrator may contact you if we need any extra information.</h4>
   Show the workshop's schedule.  Edit the items and times in the table
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
+
+
+  https://resbazsql.github.io/lc-webscraping/
+  https://resbazsql.github.io/sql-novice-survey/
+  https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/
+
+
+
+Brian: All 3 topics (rewrite to expect webscraping as input)
+
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
-
-{% if page.carpentry == "swc" %}
-  {% include sc/schedule.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/schedule.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/schedule.html %}
-{% endif %}
+<div class="row">
+  <div class="col-md-6">
+    <h3>Day 1</h3>
+    <table class="table table-striped">
+      <tr> <td>Before</td> <td><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop survey</a> </td> </tr>
+      <tr> <td>09:00</td>  <td>Instructors available for pre-session setup help.</td> </tr>
+      <tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>
+      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>      
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>14:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>
+      <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>17:00</td>  <td>END</td> </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <h3>Day 2</h3>
+    <table class="table table-striped">
+      <tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>
+      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>10:45</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>
+      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
+      <tr> <td>13:00</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>      
+      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>14:45</td>  <td><a href="https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/">From a Spreadsheet to a Database</td> </tr>
+      <tr> <td>16:45</td>  <td><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop Survey</a></td> </tr>
+      <tr> <td>17:00</td>  <td>END</td> </tr>
+    </table>
+  </div>
+</div>
 
 {% comment %}
   Collaborative Notes
@@ -258,6 +272,95 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 <h2 id="syllabus">Syllabus</h2>
 
+
+
+Day 1: http://swcarpentry.github.io/sql-novice-survey/
+
+
+Morning: Brian
+
+Selecting Data 
+Sorting and Removing Duplicates
+Filtering
+Calculating New Values
+Break
+
+Mid-morning: Richard
+
+Calculating New Values
+Missing Data
+Aggregation
+Combining Data
+Lunch
+Afternoon: Ghulam
+Combining Data
+Data Hygiene
+Programming with Databases - Python
+Brian: 
+Creating and Modifying Data
+Recap (Building a database from scratch with the classroom on the board)
+
+Day 2 (Morning): https://librarycarpentry.github.io/lc-webscraping/
+
+Morning: Richard: 
+
+What is web scraping?
+Selecting content on a web page with CSS selectors
+Visual scraping using browser extensions
+Mid-morning break (Ghulam)
+Web scraping using Python: requests and lxml
+
+Lunch
+
+
+
+Day 2 (Afternoon): http://swcarpentry.github.io/capstone-novice-spreadsheet-biblio/
+
+
+<div class="row">
+   <div class="col-md-6">
+    <h3 id="syllabus-sql"><a href="https://resbazsql.github.io/sql-novice-survey/">Managing Data with SQL</a></h3>
+    <ul>
+      <li>Reading and sorting data</li>
+      <li>Filtering with <code>where</code></li>
+      <li>Calculating new values on the fly</li>
+      <li>Handling missing values</li>
+      <li>Combining values using aggregation</li>
+      <li>Combining information from multiple tables using <code>join</code></li>
+      <li>Creating, modifying, and deleting data</li>
+      <li>Programming with databases</li>
+      <li><a href="https://resbazsql.github.io/sql-novice-survey/reference">Reference...</a></li>
+    </ul>
+  </div>
+</div>
+  
+  <div class="col-md-6">
+    <h3 id="syllabus-scraping"><a href="https://resbazsql.github.io/lc-webscraping/">Introduction to webscraping</h3>
+    <ul>
+      <li>Introduction to web scraping</li>
+      <li>Selecting content using XPath</li>
+      <li>Scraping using browser extensions</li>
+      <li>Scraping using Python and Scrapy</li>
+      <li><a href="https://resbazsql.github.io/lc-webscraping/reference">Reference...</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3 id="syllabus-database"><a href="https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/">Spreadsheet to a Database</a></h3>
+    <ul>
+      <li>Extracting Data from a Spreadsheet using Python</li>
+      <li>Creating a database for that data</li>
+      <li>Loading data into a database from a spreadsheet</li>
+      <li>If we have time: normalising the data</li>
+      <li><a href="https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/reference">Reference...</a></li>
+    </ul>
+  </div>
+ 
+
+
+<!-- 
 {% if page.carpentry == "swc" %}
   {% include sc/syllabus.html %}
 {% elsif page.carpentry == "dc" %}
@@ -265,7 +368,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% elsif page.carpentry == "lc" %}
   {% include lc/syllabus.html %}
 {% endif %}
-
+ -->
 <hr/>
 
 {% comment %}
@@ -476,7 +579,7 @@ and our administrator may contact you if we need any extra information.</h4>
           Library Carpentry
           {% endif %}
           Windows installer
-	</a>
+  </a>
         and double click on the file to run it.
         <strong>This installer requires an active internet connection.</strong>
       </p>
@@ -612,57 +715,6 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endcomment %}
 </div> {% comment %} End of 'Python' section. {% endcomment %}
 
-<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
-  <h3>R</h3>
-
-  <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/ide/download/desktop/#download">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/ide/download/desktop/#download">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-        You can download the binary files for your distribution
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="https://www.rstudio.com/ide/download/desktop/#download">RStudio IDE</a>.
-      </p>
-    </div>
-  </div>
-</div> {% comment %} End of 'R' section. {% endcomment %}
-
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
 
@@ -685,7 +737,7 @@ and our administrator may contact you if we need any extra information.</h4>
           Library Carpentry
           {% endif %}
           Windows Installer
-	</a>
+  </a>
         installs SQLite for Windows.
         If you used the installer to configure nano, you don't need to run it again.
       </p>
@@ -708,76 +760,3 @@ and our administrator may contact you if we need any extra information.</h4>
     <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
     Instructors will provide a workaround for it if needed.</strong></p>
 </div> {% comment %} End of 'SQLite' section. {% endcomment %}
-
-<div id="openrefine"> {% comment %} Start of 'OpenRefine' section. {% endcomment %}
-  <h3>OpenRefine</h3>
-  <p>
-    For this lesson you will need <em>OpenRefine</em> and a
-    web browser. <em>Note:</em> this is a Java program that runs on your machine (not in the cloud).
-    It runs inside a web browser, but no web connection is needed.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="openrefine-windows">Windows</h4>
-      <p>
-        Check that you have either the Firefox or the Chrome browser installed and set as your default browser.
-        <strong>OpenRefine runs in your default browser.</strong>
-        It will not run correctly in Internet Explorer.
-      </p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a></p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by right-clicking and selecting "Extract ...". </p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by clicking <code>google-refine.exe</code> (this will launch a command prompt window, but you can ignore that - just wait for OpenRefine to open in the browser).</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-mac">Mac</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong> It may not run correctly in Safari.</p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Create a new directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory by double-clicking it.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by dragging the icon into the Applications folder.</p>
-      <p>Use <code>Ctrl-click/Open ... </code> to launch it.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="openrefine-linux">Linux</h4>
-      <p>Check that you have either the Firefox or the Chrome browser installed and set as your default browser. <strong>OpenRefine runs in your default browser.</strong></p>
-      <p>Download software from <a href="http://openrefine.org/">http://openrefine.org/</a>.</p>
-      <p>Make a directory called OpenRefine.</p>
-      <p>Unzip the downloaded file into the OpenRefine directory.</p>
-      <p>Go to your newly created OpenRefine directory.</p>
-      <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
-      <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-    </div>
-  </div>
-</div> {% comment %} End of 'OpenRefine' section. {% endcomment %}
-
-{% comment %}
-<div id="vm">
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
-{% endcomment %}
