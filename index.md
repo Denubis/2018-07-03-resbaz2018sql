@@ -203,36 +203,36 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 <div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr> <td>Before</td> <td><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop survey</a> </td> </tr>
-      <tr> <td>09:00</td>  <td>Instructors available for pre-session setup help.</td> </tr>
-      <tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>10:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>      
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>14:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</td> </tr>
-      <tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
-      <tr> <td>17:00</td>  <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>10:45</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</td> </tr>      
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>14:45</td>  <td><a href="https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/">From a Spreadsheet to a Database</td> </tr>
-      <tr> <td>16:45</td>  <td><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop Survey</a></td> </tr>
-      <tr> <td>17:00</td>  <td>END</td> </tr>
-    </table>
-  </div>
+<div class="col-md-6">
+<h3>Day 1</h3>
+<table class="table table-striped">
+<tr> <td>Before</td> <td><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop survey</a> </td> </tr>
+<tr> <td>09:00</td>  <td>Instructors available for pre-session setup help.</td> </tr>
+<tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL</a></td> </tr>
+<tr> <td>11:00</td>  <td>Coffee</td> </tr>
+<tr> <td>11:30</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</a></td> </tr>
+<tr> <td>13:00</td>  <td>Lunch break</td> </tr>
+<tr> <td>14:00</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</a></td> </tr>      
+<tr> <td>15:15</td>  <td>Coffee</td> </tr>
+<tr> <td>15:45</td>  <td><a href="https://resbazsql.github.io/sql-novice-survey/">SQL, continued</a></td> </tr>
+<tr> <td>16:45</td>  <td>Wrap-up</td> </tr>
+<tr> <td>17:00</td>  <td>END</td> </tr>
+</table>
+</div>
+<div class="col-md-6">
+<h3>Day 2</h3>
+<table class="table table-striped">
+<tr> <td>09:45</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</a></td> </tr>
+<tr> <td>11:00</td>  <td>Coffee</td> </tr>
+<tr> <td>11:30</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</a></td> </tr>
+<tr> <td>13:00</td>  <td>Lunch break</td> </tr>
+<tr> <td>14:00</td>  <td><a href="https://resbazsql.github.io/lc-webscraping/">Webscraping</a></td> </tr>      
+<tr> <td>15:15</td>  <td>Coffee</td> </tr>
+<tr> <td>15:45</td>  <td><a href="https://resbazsql.github.io/capstone-novice-spreadsheet-biblio/">From a Spreadsheet to a Database</a></td> </tr>
+<tr> <td>16:45</td>  <td><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop Survey</a></td> </tr>
+<tr> <td>17:00</td>  <td>END</td> </tr>
+</table>
+</div>
 </div>
 
 {% comment %}
@@ -274,49 +274,6 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
 
 
 
-Day 1: http://swcarpentry.github.io/sql-novice-survey/
-
-
-Morning: Brian
-
-Selecting Data 
-Sorting and Removing Duplicates
-Filtering
-Calculating New Values
-Break
-
-Mid-morning: Richard
-
-Calculating New Values
-Missing Data
-Aggregation
-Combining Data
-Lunch
-Afternoon: Ghulam
-Combining Data
-Data Hygiene
-Programming with Databases - Python
-Brian: 
-Creating and Modifying Data
-Recap (Building a database from scratch with the classroom on the board)
-
-Day 2 (Morning): https://librarycarpentry.github.io/lc-webscraping/
-
-Morning: Richard: 
-
-What is web scraping?
-Selecting content on a web page with CSS selectors
-Visual scraping using browser extensions
-Mid-morning break (Ghulam)
-Web scraping using Python: requests and lxml
-
-Lunch
-
-
-
-Day 2 (Afternoon): http://swcarpentry.github.io/capstone-novice-spreadsheet-biblio/
-
-
 <div class="row">
    <div class="col-md-6">
     <h3 id="syllabus-sql"><a href="https://resbazsql.github.io/sql-novice-survey/">Managing Data with SQL</a></h3>
@@ -332,10 +289,9 @@ Day 2 (Afternoon): http://swcarpentry.github.io/capstone-novice-spreadsheet-bibl
       <li><a href="https://resbazsql.github.io/sql-novice-survey/reference">Reference...</a></li>
     </ul>
   </div>
-</div>
   
   <div class="col-md-6">
-    <h3 id="syllabus-scraping"><a href="https://resbazsql.github.io/lc-webscraping/">Introduction to webscraping</h3>
+    <h3 id="syllabus-scraping"><a href="https://resbazsql.github.io/lc-webscraping/">Introduction to webscraping</a></h3>
     <ul>
       <li>Introduction to web scraping</li>
       <li>Selecting content using XPath</li>
@@ -358,17 +314,7 @@ Day 2 (Afternoon): http://swcarpentry.github.io/capstone-novice-spreadsheet-bibl
     </ul>
   </div>
  
-
-
-<!-- 
-{% if page.carpentry == "swc" %}
-  {% include sc/syllabus.html %}
-{% elsif page.carpentry == "dc" %}
-  {% include dc/syllabus.html %}
-{% elsif page.carpentry == "lc" %}
-  {% include lc/syllabus.html %}
-{% endif %}
- -->
+</div>
 <hr/>
 
 {% comment %}
