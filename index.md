@@ -2,10 +2,10 @@
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "Resbaz Sydney 2018"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "Room 373, 17 Wallys Walk, Macquarie University "      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "8 SCO (Sir Christopher Ondaatje Avenue) building, Room TBD"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "au"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "-33.7747746,151.1121345"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+latlng: "-33.7755405,151.1143426"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
 humandate: "Jul 3-5, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:45 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2018-07-03      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
@@ -641,38 +641,30 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
       </ol>
     </div>
 
-### Scrapy
+<div class="row">
+  <div class="col-md-12">
+    <h4>Scrapy</h4>
 
 Once you have a working installation of Python, the next step is to install [Scrapy](https://scrapy.org/).
 
 If you have installed Python using the Anaconda framework as suggested by the Software Carpentry setup instructions,
 you can easilly install Scrapy by doing the following:
-
-1. Open a new shell (e.g. Terminal on Mac, or the Anaconda command-line tool on Windows)
-2. Type the following:
-
-> conda install -c conda-forge scrapy
->
-{: .source}
+<ol>
+<li> Open a new shell (e.g. Terminal on Mac, or the Anaconda command-line tool on Windows)</li>
+<li> Type the following: <code>conda install -c conda-forge scrapy</code></li>
+</ol>
 
 Alternatively, if you have another distribution of Python, you can try using pip (or pip3 if you're on ubuntu):
 
-> pip install scrapy
->
-{: .source}
+<code>pip install scrapy</code>
 
 If you run into issues while installing Scrapy, refer to the
-[official Scrapy install guide](https://doc.scrapy.org/en/latest/intro/install.html#intro-install)
-or get in touch with your lesson instructor.
-  </div>
-{% comment %}
-  <p>
-  Once you are done installing the software listed above,
-  please go to <a href="setup/index.html">this page</a>,
-  which has instructions on how to test that everything was installed correctly.
-  </p>
-{% endcomment %}
-</div> {% comment %} End of 'Python' section. {% endcomment %}
+<a href="https://doc.scrapy.org/en/latest/intro/install.html#intro-install">official Scrapy install guide</a> or get in touch with your lesson instructor.
+</div>
+</div>
+  
+
+</div> 
 
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
