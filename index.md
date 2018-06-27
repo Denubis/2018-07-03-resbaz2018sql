@@ -11,7 +11,7 @@ humantime: "9:45 am - 5:00 pm"    # human-readable times for the workshop (e.g.,
 startdate: 2018-07-03      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2018-07-04        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Brian Ballsun-Stanton", "Richard Berry", "Ghulam Murtaza"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Peter Ha", "Aniko Toth"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Peter Ha", "Aniko Toth", "Emily Neo"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["resbazsydney@googlegroups.com", "brian.ballsun-stanton@mq.edu.au"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes: http://pad.software-carpentry.org/2018-03-03-resbazSQL             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -568,10 +568,7 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
   </div>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
-<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
-           the workshop will teach Python using something other than
-           the Jupyter notebook.
-           Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
+<div id="python"> 
   <h3>Python</h3>
 
   <p>
@@ -589,15 +586,7 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
       (e.g., 3.6 is fine).
     </p>
 
-    <p>
-      We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
-      a programming environment that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
-      Firefox browsers are all
-      <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-      (some older browsers, including Internet Explorer version 9
-      and below, are not).
-    </p>
+    
 
   <div class="row">
     <div class="col-md-4">
@@ -651,6 +640,30 @@ Brian: All 3 topics (rewrite to expect webscraping as input)
         </li>
       </ol>
     </div>
+
+### Scrapy
+
+Once you have a working installation of Python, the next step is to install [Scrapy](https://scrapy.org/).
+
+If you have installed Python using the Anaconda framework as suggested by the Software Carpentry setup instructions,
+you can easilly install Scrapy by doing the following:
+
+1. Open a new shell (e.g. Terminal on Mac, or the Anaconda command-line tool on Windows)
+2. Type the following:
+
+> conda install -c conda-forge scrapy
+>
+{: .source}
+
+Alternatively, if you have another distribution of Python, you can try using pip (or pip3 if you're on ubuntu):
+
+> pip install scrapy
+>
+{: .source}
+
+If you run into issues while installing Scrapy, refer to the
+[official Scrapy install guide](https://doc.scrapy.org/en/latest/intro/install.html#intro-install)
+or get in touch with your lesson instructor.
   </div>
 {% comment %}
   <p>
