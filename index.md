@@ -2,7 +2,7 @@
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "Resbaz Sydney 2018"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "8 SCO (Sir Christopher Ondaatje Avenue) building, Room TBD"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "8 SCO (Sir Christopher Ondaatje Avenue) building, Room 213"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "au"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "-33.7755405,151.1143426"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
@@ -665,8 +665,9 @@ If you run into issues while installing Scrapy, refer to the
   
 
 </div> 
+<div class="row">
 
-<div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
+<div class="md-col-12" id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
 
   <p>
@@ -710,4 +711,5 @@ If you run into issues while installing Scrapy, refer to the
   <p><strong>If you installed Anaconda, it also has a copy of SQLite
     <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
     Instructors will provide a workaround for it if needed.</strong></p>
-</div> {% comment %} End of 'SQLite' section. {% endcomment %}
+</div> 
+</div>{% comment %} End of 'SQLite' section. {% endcomment %}
